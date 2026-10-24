@@ -1,0 +1,49 @@
+WEIRD Package Registry
+
+The community package registry for the WEIRD programming language.
+
+This repository is intended to host public WEIRD package releases and document how packages are distributed and maintained. Packages are distributed through GitHub Releases rather than a dedicated package server.
+
+Status
+
+The registry is in its early stages. Package discovery and installation require a compatible version of the WEIRD Package Manager (WPM). Until the registry contains published packages and end-to-end compatibility has been verified, functionality should be considered experimental.
+
+Package Distribution
+
+Packages are distributed as versioned GitHub Releases. Each release must contain the archive and metadata required by the compatible WPM client.
+
+The registry identifier is:
+
+github://mic3ul/weird-packages
+
+This identifier is intended for WPM versions that support the GitHub registry adapter.
+
+Publishing Packages
+
+Package maintainers should:
+
+1. Follow the package manifest and archive format specified by the WEIRD documentation.
+2. Use a unique package name and a valid semantic version.
+3. Test the package in a clean environment before publishing.
+4. Publish a GitHub Release containing the required package archive and metadata.
+5. Document dependencies and provide a license for the package.
+
+Publishing requires write access to this repository. Never include credentials, access tokens, private keys, or personal information in package archives.
+
+Security
+
+Packages may contain executable code. Review package contents and source before installing or running them.
+
+This registry does not currently guarantee package safety or provide package signing, automated malware scanning, or individual publisher accounts. Integrity checks can detect file modifications but cannot establish that a package is trustworthy.
+
+Contributing
+
+Contributions to registry documentation and package conventions are welcome. Report package issues with the package name, version, and a clear description of the problem.
+
+Related Repository
+
+WEIRD language and tooling: https://github.com/mic3ul/WEIRD
+
+License
+
+Individual packages are distributed under their respective licenses. Each package should include its own license information.
